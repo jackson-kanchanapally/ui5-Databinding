@@ -1,6 +1,6 @@
 specVersion: "3.2"
 metadata:
-  name: ui5.databinding
+  name: ui5-databinding
 type: application
 framework:
   name: OpenUI5
