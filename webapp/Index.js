@@ -12,19 +12,20 @@ sap.ui.require([
 			firstName: "Harry",
 			lastName: "Hawk",
 			enabled: true,
-            panelHeaderText: "Data Binding Basics"
+            panelHeaderText: "Data Binding Basics",
+            address: {
+				street: "Dietmar-Hopp-Allee 16",
+				city: "Walldorf",
+				zip: "69190",
+				country: "Germany"
+			},
+            salesAmount:12345.654,
+            currencyCode:"BTC"
 		});
 
 		// Assign the model object to the SAPUI5 core
 		sap.ui.getCore().setModel(oModel);
 
-		// Create a resource bundle for language specific texts
-		// the configured supportedLocales represent the i18n files present:
-		// * "" - i18n/i18n.properties
-		// the configured fallbackLocale should represent one of these files
-		// * "" - according to the fallback chain the root bundle is the last fallback.
-		//   Configuring it explicitly avoids side effects when additional resource files are added.
-		// @see https://ui5.sap.com/#/topic/ec753bc539d748f689e3ac814e129563
 		var oResourceModel = new ResourceModel({
 			bundleName: "sap.ui.demo.db.i18n.i18n",
 			supportedLocales: ["", "de"],
